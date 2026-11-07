@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>51每日大赛-赛事动态_今日战报_热门赛程与榜单解析</title>
+<meta name="description" content="51每日大赛专题页聚合每日赛事动态、热门赛程、参赛选手表现与实时榜单。无论你是选手还是观众，都能在51每日大赛找到今日战报、项目解析和社区讨论精华。">
+<meta name="keywords" content="51每日大赛,每日赛事,51大赛榜单,今日赛程,51每日大赛战报">
+<style>
+:root {
+  --bg: #f4f6fa;
+  --surface: #ffffff;
+  --surface2: #f0f3f9;
+  --text: #1d2a3a;
+  --text-secondary: #516175;
+  --text-muted: #8695a8;
+  --border: #e2e9f0;
+  --accent: #1f6de0;
+  --accent-soft: #e9f0fe;
+  --accent-deep: #0d4db8;
+  --gold: #d4a017;
+  --gold-soft: #fef7e0;
+  --danger: #e04545;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 4px 16px rgba(20,40,80,0.06);
+  --shadow-hover: 0 8px 28px rgba(20,40,80,0.1);
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* header */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-badge {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--accent), #3b8beb);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+.logo-text {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text);
+}
+.logo-text span {
+  color: var(--accent);
+}
+.main-nav {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.main-nav a {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.main-nav a:hover {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  text-decoration: none;
+}
+.header-search {
+  display: flex;
+  align-items: center;
+  background: var(--surface2);
+  border-radius: 24px;
+  padding: 4px 4px 4px 16px;
+  border: 1px solid transparent;
+  transition: border 0.15s;
+}
+.header-search:focus-within {
+  border-color: var(--accent);
+  background: #fff;
+}
+.header-search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  width: 150px;
+  padding: 6px 0;
+  color: var(--text);
+}
+.header-search button {
+  background: var(--accent);
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.header-search button:hover {
+  background: var(--accent-deep);
+}
+/* banner */
+.hero {
+  background: linear-gradient(135deg, #eef4fd 0%, #ffffff 50%, #f7f9fc 100%);
+  padding: 44px 0 36px;
+  border-bottom: 1px solid var(--border);
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.hero-badge {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  width: fit-content;
+}
+.hero h1 {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  color: #0e1a2b;
+}
+.hero h1 em {
+  font-style: normal;
+  background: linear-gradient(120deg, var(--accent) 0%, #5ea0f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 720px;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+.hero-actions a {
+  padding: 9px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  transition: all 0.15s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+}
+.hero-actions a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(31,109,224,0.12);
+}
+.hero-actions a.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.hero-actions a.primary:hover {
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
+}
+/* section common */
+.section {
+  margin: 40px 0;
+}
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.section-head h2 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #122030;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-head h2::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  background: var(--accent);
+  border-radius: 4px;
+}
+.section-head .more-link {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.section-head .more-link:hover {
+  color: var(--accent);
+}
+/* card grid */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+.card-cover {
+  height: 100px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 14px;
+  background: linear-gradient(135deg, var(--accent-soft), #dce8fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--accent-deep);
+  letter-spacing: 0.5px;
+}
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.tag-sm {
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  background: var(--surface2);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.tag-sm.hot {
+  background: var(--gold-soft);
+  color: #9a6b00;
+}
+.card-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 10px;
+  flex: 1;
+}
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  margin-top: auto;
+}
+/* list update */
+.update-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.update-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.update-item:hover {
+  background: #fafcff;
+}
+.update-index {
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--accent);
+  min-width: 28px;
+  opacity: 0.7;
+}
+.update-body {
+  flex: 1;
+}
+.update-title {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text);
+}
+.update-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+.update-time {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+/* category */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.category-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 18px 16px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text);
+  box-shadow: var(--shadow);
+  transition: all 0.15s;
+}
+.category-item:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+.category-item span {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+/* deep analysis */
+.article-box {
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 28px 32px;
+  box-shadow: var(--shadow);
+}
+.article-box h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 20px 0 10px;
+  color: #122030;
+}
+.article-box h3:first-child {
+  margin-top: 0;
+}
+.article-box p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+  line-height: 1.75;
+}
+/* faq */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  box-shadow: var(--shadow);
+}
+.faq-q {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  cursor: default;
+  display: flex;
+  gap: 8px;
+}
+.faq-q::before {
+  content: 'Q';
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 14px;
+}
+.faq-a {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  padding-left: 22px;
+  line-height: 1.7;
+}
+/* comments */
+.comment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.comment-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: 12px;
+}
+.comment-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c9dcf8, #a8c6f0);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: #2a4a7a;
+}
+.comment-body {
+  flex: 1;
+}
+.comment-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+.comment-name {
+  font-weight: 600;
+  color: var(--text);
+}
+.comment-date {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+.comment-text {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+/* news */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.news-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 18px 22px;
+  box-shadow: var(--shadow);
+  transition: all 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.news-item:hover {
+  border-color: var(--accent-soft);
+}
+.news-title {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text);
+}
+.news-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+.news-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+/* footer */
+.site-footer {
+  background: #0f1a2b;
+  color: #a9b8cc;
+  padding: 44px 0 28px;
+  margin-top: 56px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.footer-brand {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.footer-brand span {
+  color: #5ea0f0;
+}
+.footer-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #7e8fa6;
+}
+.footer-col h4 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.footer-col a {
+  display: block;
+  color: #8d9db5;
+  font-size: 13px;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+.footer-col a:hover {
+  color: #fff;
+}
+.footer-bottom {
+  border-top: 1px solid #1e2c40;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #6b7a91;
+  gap: 8px;
+}
+.footer-bottom a {
+  color: #6b7a91;
+}
+.footer-bottom a:hover {
+  color: #fff;
+}
+/* responsive */
+@media (max-width: 1024px) {
+  .grid-3, .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 720px) {
+  .hero h1 {
+    font-size: 26px;
+  }
+  .hero-desc {
+    font-size: 15px;
+  }
+  .header-inner {
+    height: auto;
+    padding: 10px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header-search input {
+    width: 110px;
+  }
+  .main-nav {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+  .grid-3, .grid-4, .grid-2, .comment-grid {
+    grid-template-columns: 1fr;
+  }
+  .category-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .article-box {
+    padding: 20px 18px;
+  }
+  .section-head h2 {
+    font-size: 19px;
+  }
+  .update-item {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .update-time {
+    width: 100%;
+    text-align: right;
+    padding-left: 42px;
+  }
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 头部导航 -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo-area">
+      <div class="logo-badge">51</div>
+      <div class="logo-text">每日<span>大赛</span></div>
+    </div>
+    <nav class="main-nav">
+      <a href="/#hero">首页</a>
+      <a href="/#hot-recommend">热门推荐</a>
+      <a href="/#latest-updates">最新赛况</a>
+      <a href="/#categories">赛事分类</a>
+      <a href="/#deep-analysis">深度解析</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comments">社区评论</a>
+      <a href="/#news">赛事资讯</a>
+    </nav>
+    <div class="header-search">
+      <input type="text" placeholder="搜索赛事、选手、项目…" aria-label="搜索">
+      <button type="button">搜索</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Banner -->
+  <section class="hero" id="hero">
+    <div class="container hero-content">
+      <span class="hero-badge">2026年11月7日 · 赛事热度持续更新中</span>
+      <h1><em>51每日大赛</em> 今日战报与热门赛程全览</h1>
+      <p class="hero-desc">51每日大赛汇聚每日最新赛事结果、选手数据与项目榜单。无论你是参赛者还是关注者，都能在这里快速掌握今日赛况、热门对决和社区讨论焦点。</p>
+      <div class="hero-actions">
+        <a href="/#latest-updates" class="primary">查看今日更新</a>
+        <a href="/#hot-recommend">热门赛事推荐</a>
+        <a href="/#rank-board">实时榜单</a>
+        <a href="/#faq">新手答疑</a>
+        <a href="/#categories">按分类浏览</a>
+        <a href="/#comments">社区热评</a>
+        <a href="/#news">赛事快讯</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门推荐 -->
+  <section class="section container" id="hot-recommend">
+    <div class="section-head">
+      <h2>51每日大赛 · 热门赛事推荐</h2>
+      <a href="/#hot-recommend" class="more-link">查看更多推荐 →</a>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-cover">竞技 · 团队赛</div>
+        <div class="card-title">星火杯 · 团队竞技挑战赛</div>
+        <div class="card-tags"><span class="tag-sm hot">高热度</span><span class="tag-sm">团队</span><span class="tag-sm">策略</span></div>
+        <div class="card-desc">五支队伍进入决赛圈，战术博弈成为今日51每日大赛最大看点，选手个人能力与团队配合的平衡决定最终排名。</div>
+        <div class="card-meta"><span>🔥 热度 9.2万</span><span>今日 14:00 更新</span></div>
+      </div>
+      <div class="card">
+        <div class="card-cover">个人 · 速通赛</div>
+        <div class="card-title">极速挑战 · 个人速通赛</div>
+        <div class="card-tags"><span class="tag-sm hot">新纪录</span><span class="tag-sm">单人</span><span class="tag-sm">操作</span></div>
+        <div class="card-desc">选手「风痕」以3分12秒刷新赛道纪录，51每日大赛速通榜再次易主，评论区已掀起关于路线优化的讨论。</div>
+        <div class="card-meta"><span>🔥 热度 7.8万</span><span>今日 11:30 更新</span></div>
+      </div>
+      <div class="card">
+        <div class="card-cover">智力 · 知识赛</div>
+        <div class="card-title">脑力对决 · 知识竞赛</div>
+        <div class="card-tags"><span class="tag-sm">知识</span><span class="tag-sm">答题</span><span class="tag-sm">积分</span></div>
+        <div class="card-desc">累计答题正确率榜单出炉，前三名分差仅0.5分，今晚的加时赛将决定51每日大赛知识赛冠军归属。</div>
+        <div class="card-meta"><span>🔥 热度 6.4万</span><span>今日 09:00 更新</span></div>
+      </div>
+      <div class="card">
+        <div class="card-cover">创意 · 作品赛</div>
+        <div class="card-title">灵感工坊 · 创意作品赛</div>
+        <div class="card-tags"><span class="tag-sm">创意</span><span class="tag-sm">作品</span><span class="tag-sm">投票</span></div>
+        <div class="card-desc">本周主题「未来城市」投稿量突破400件，51每日大赛创意赛区进入大众投票阶段，竞争激烈。</div>
+        <div class="card-meta"><span>🔥 热度 5.9万</span><span>今日 10:15 更新</span></div>
+      </div>
+      <div class="card">
+        <div class="card-cover">竞猜 · 预测赛</div>
+        <div class="card-title">胜负预测 · 每日竞猜</div>
+        <div class="card-tags"><span class="tag-sm">竞猜</span><span class="tag-sm">预测</span><span class="tag-sm">积分</span></div>
+        <div class="card-desc">今日三场焦点对决的预测通道已开启，51每日大赛用户可参与胜负竞猜，积分榜前50名将获得专属徽章。</div>
+        <div class="card-meta"><span>🔥 热度 5.1万</span><span>今日 08:00 开放</span></div>
+      </div>
+      <div class="card">
+        <div class="card-cover">合作 · 接力赛</div>
+        <div class="card-title">接力挑战 · 团队协作赛</div>
+        <div class="card-tags"><span class="tag-sm">协作</span><span class="tag-sm">接力</span><span class="tag-sm">计时</span></div>
+        <div class="card-desc">四人接力赛今日开启报名，51每日大赛新增实时接力进度条，观众可同步查看每一棒的分段用时。</div>
+        <div class="card-meta"><span>🔥 热度 4.7万</span><span>今日 12:00 报名</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新更新 -->
+  <section class="section container" id="latest-updates">
+    <div class="section-head">
+      <h2>51每日大赛 · 最新赛况与动态</h2>
+      <a href="/#latest-updates" class="more-link">全部更新 →</a>
+    </div>
+    <div class="update-list">
+      <div class="update-item">
+        <div class="update-index">01</div>
+        <div class="update-body">
+          <div class="update-title">星火杯团队竞技挑战赛 · 半决赛名单公布</div>
+          <div class="update-desc">经过三轮积分赛，四支队伍晋级半决赛，51每日大赛今晚19:00直播抽签对阵。</div>
+        </div>
+        <div class="update-time">今天 14:20</div>
+      </div>
+      <div class="update-item">
+        <div class="update-index">02</div>
+        <div class="update-body">
+          <div class="update-title">极速挑战速通赛 · 新纪录诞生</div>
+          <div class="update-desc">选手「风痕」跑出3分12秒，刷新赛道历史最佳，51每日大赛速通榜同步更新。</div>
+        </div>
+        <div class="update-time">今天 13:45</div>
+      </div>
+      <div class="update-item">
+        <div class="update-index">03</div>
+        <div class="update-body">
+          <div class="update-title">脑力对决知识赛 · 今日题库更新</div>
+          <div class="update-desc">新增科技与人文类题目共30道，选手可在51每日大赛答题入口查看今日赛题范围。</div>
+        </div>
+        <div class="update-time">今天 12:10</div>
+      </div>
+      <div class="update-item">
+        <div class="update-index">04</div>
+        <div class="update-body">
+          <div class="update-title">创意作品赛 · 本周主题投票开启</div>
+          <div class="update-desc">「未来城市」主题作品投票通道已开放，51每日大赛用户每日可投3票。</div>
+        </div>
+        <div class="update-time">今天 11:00</div>
+      </div>
+      <div class="update-item">
+        <div class="update-index">05</div>
+        <div class="update-body">
+          <div class="update-title">每日竞猜 · 今日三场预测通道开启</div>
+          <div class="update-desc">预测通道将在首场比赛开始前15分钟关闭，请留意51每日大赛时间提示。</div>
+        </div>
+        <div class="update-time">今天 09:30</div>
+      </div>
+      <div class="update-item">
+        <div class="update-index">06</div>
+        <div class="update-body">
+          <div class="update-title">接力挑战赛 · 报名队伍突破80支</div>
+          <div class="update-desc">报名将于今日18:00截止，51每日大赛赛事日程页已更新接力赛时间安排。</div>
+        </div>
+        <div class="update-time">今天 08:15</div>
+      </div>
+      <div class="update-item">
+        <div class="update-index">07</div>
+        <div class="update-body">
+          <div class="update-title">积分总榜 · 本周排名变动</div>
+          <div class="update-desc">前三名积分差距进一步缩小，51每日大赛总榜竞争进入白热化阶段。</div>
+        </div>
+        <div class="update-time">昨天 21:40</div>
+      </div>
+      <div class="update-item">
+        <div class="update-index">08</div>
+        <div class="update-body">
+          <div class="update-title">赛事规则 · 冬季赛制调整说明</div>
+          <div class="update-desc">从11月10日起，部分项目将启用新计分规则，详细说明已在51每日大赛规则页发布。</div>
+        </div>
+        <div class="update-time">昨天 18:20</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类入口 -->
+  <section class="section container" id="categories">
+    <div class="section-head">
+      <h2>按赛事类型快速查找</h2>
+      <a href="/#categories" class="more-link">全部分类 →</a>
+    </div>
+    <div class="category-grid">
+      <a href="/#hot-recommend" class="category-item">团队竞技<span>策略与配合</span></a>
+      <a href="/#hot-recommend" class="category-item">个人速通<span>操作与极限</span></a>
+      <a href="/#hot-recommend" class="category-item">知识答题<span>脑力与积累</span></a>
+      <a href="/#hot-recommend" class="category-item">创意作品<span>灵感与表达</span></a>
+      <a href="/#hot-recommend" class="category-item">竞猜预测<span>判断与运气</span></a>
+      <a href="/#hot-recommend" class="category-item">接力协作<span>团队与节奏</span></a>
+      <a href="/#rank-board" class="category-item">实时榜单<span>积分与排名</span></a>
+      <a href="/#latest-updates" class="category-item">今日赛程<span>时间与对阵</span></a>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section class="section container" id="deep-analysis">
+    <div class="section-head">
+      <h2>51每日大赛 · 深度解析</h2>
+    </div>
+    <div class="article-box">
+      <h3>51每日大赛的赛事结构：从每日更新到长期关注</h3>
+      <p>51每日大赛并不是单一赛事，而是一个持续更新的赛事聚合体系。它将团队竞技、个人速通、知识答题、创意作品、竞猜预测和接力协作等多种项目纳入同一日程框架，每天产生新的赛果与排名。对于关注者来说，这意味着不需要在不同渠道之间反复切换，就能在一个页面里掌握今日重点场次、选手表现和榜单变化。这种“每日更新”的节奏也让内容消费变得更轻松——每天花几分钟浏览，就能跟上整个赛事生态的脉络。</p>
+      <h3>今日赛程的看点在哪里</h3>
+      <p>从当日更新来看，星火杯团队竞技挑战赛的半决赛对阵是关注度最高的节点。四支队伍在积分赛阶段展现出不同的战术风格：有的队伍擅长前期压制，有的则依靠中后期决策翻盘。51每日大赛的深度解析栏目会持续跟进每支队伍的比赛数据，包括团战胜率、资源控制率和关键选手的发挥波动。与此同时，极速挑战速通赛的新纪录也值得注意——选手「风痕」将赛道成绩推进到3分12秒，这个成绩在短期内可能很难被打破，但速通赛的魅力恰恰在于纪录总会被重新定义。</p>
+      <h3>不同类型项目的参与门槛与观看体验</h3>
+      <p>知识竞赛和创意作品赛的参与门槛相对较低，适合新用户从旁观者逐步过渡到参与者。知识赛的题目覆盖科技、人文、生活常识等方向，积分榜的竞争激烈程度不亚于竞技类项目。创意作品赛则更看重表达和审美，本周「未来城市」主题已经收到超过400件投稿，投票环节的社区互动量明显高于其他赛区。对于喜欢即时反馈的用户，竞猜预测和接力协作赛提供了更快的节奏：竞猜结果在比赛结束后即揭晓，接力赛则有实时进度条让观众同步感受每一棒的交接压力。</p>
+      <h3>51每日大赛的用户价值</h3>
+      <p>简单来说，这个页面适合三类人：一是参赛选手，需要查看赛程、规则变化和对手数据；二是赛事观众，希望快速了解今日热点和社区讨论焦点；三是内容消费者，把51每日大赛当作一个日常信息源，每天浏览几分钟就能获得谈资和参与感。页面内提供的分类入口、实时榜单、FAQ和评论模块，都是围绕这三个场景设计的。如果你刚开始关注，建议从热门推荐卡片入手，再配合最新赛况列表了解当日节奏，最后到深度解析里看具体分析。这样一条浏览路径，能让你在最短时间内建立对51每日大赛的整体认知。</p>
+    </div>
+  </section>
+
+  <!-- 榜单板块（作为额外补充，匹配骨架C的榜单感） -->
+  <section class="section container" id="rank-board">
+    <div class="section-head">
+      <h2>51每日大赛 · 实时积分榜</h2>
+      <a href="/#rank-board" class="more-link">完整榜单 →</a>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title" style="font-size:17px;">🏆 综合积分总榜（前五）</div>
+        <div class="update-list" style="margin-top:8px;">
+          <div class="update-item" style="border:none;padding:8px 0;background:transparent;"><div class="update-index">1</div><div class="update-body"><div class="update-title">风痕</div><div class="update-desc">速通赛+竞猜赛 · 积分 2860</div></div></div>
+          <div class="update-item" style="border:none;padding:8px 0;background:transparent;"><div class="update-index">2</div><div class="update-body"><div class="update-title">星火战队</div><div class="update-desc">团队赛+接力赛 · 积分 2795</div></div></div>
+          <div class="update-item" style="border:none;padding:8px 0;background:transparent;"><div class="update-index">3</div><div class="update-body"><div class="update-title">答题小能手</div><div class="update-desc">知识赛 · 积分 2740</div></div></div>
+          <div class="update-item" style="border:none;padding:8px 0;background:transparent;"><div class="update-index">4</div><div class="update-body"><div class="update-title">灵感工坊</div><div class="update-desc">创意赛 · 积分 2680</div></div></div>
+          <div class="update-item" style="border:none;padding:8px 0;background:transparent;"><div class="update-index">5</div><div class="update-body"><div class="update-title">预测大师</div><div class="update-desc">竞猜赛 · 积分 2610</div></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title" style="font-size:17px;">📈 今日热度上升榜</div>
+        <div class="update-list" style="margin-top:8px;">
+          <div class="update-item" style="border:none;padding:8px 0;background:transparent;"><div class="update-index">1</div><div class="update-body"><div class="update-title">星火杯半决赛</div><div class="update-desc">搜索量上涨 240%</div></div></div>
+          <div class="update-item" style="border:none;padding:8px 0;background:transparent;"><div class="update-index">2</div><div class="update-body"><div class="update-title">速通新纪录</div><div class="update-desc">讨论量上涨 180%</div></div></div>
+          <div class="update-item" style="border:none;padding:8px 0;background:transparent;"><div class="update-index">3</div><div class="update-body"><div class="update-title">创意赛投票</div><div class="update-desc">参与人数上涨 150%</div></div></div>
+          <div class="update-item" style="border:none;padding:8px 0;background:transparent;"><div class="update-index">4</div><div class="update-body"><div class="update-title">接力赛报名</div><div class="update-desc">报名量上涨 120%</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section container" id="faq">
+    <div class="section-head">
+      <h2>51每日大赛 · 常见问题</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">51每日大赛每天都更新哪些内容？</div>
+        <div class="faq-a">每天会更新赛程安排、赛果速报、积分榜变动、选手数据和社区热门讨论。具体包括团队赛对阵、速通赛纪录、知识赛题库范围、创意赛投票进展等。你可以在“最新赛况”板块看到按时间排列的更新条目，重要场次还会在热门推荐中单独列出。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">我是新手，应该从哪个项目开始看？</div>
+        <div class="faq-a">建议从知识竞赛或竞猜预测入手，这两类项目的规则相对直观，观看门槛低。知识赛的题目贴近日常认知，竞猜预测则不需要深入了解选手数据也能参与。如果你对操作类内容更感兴趣，可以直接关注速通赛的纪录变化，51每日大赛的速通榜会标注每次成绩的刷新时间。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">51每日大赛的排名依据是什么？</div>
+        <div class="faq-a">综合积分榜根据选手或队伍在不同项目中的表现累计积分，不同项目的权重略有差异。团队赛和接力赛更看重协作结果，速通赛和知识赛侧重个人能力，创意赛则结合评委打分与大众投票。具体计分规则可以在规则说明页查看，每次赛制调整也会提前发布公告。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">如何参与创意作品赛的投票？</div>
+        <div class="faq-a">在创意作品赛专题页进入投票通道，登录后每日可获得3次投票机会，每次可投给不同作品。51每日大赛的投票数据会实时显示在作品卡片上，但最终排名要等到投票截止后统一结算。投票期间也可以查看其他用户的评论，了解不同作品的支持理由。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">接力挑战赛的报名条件是什么？</div>
+        <div class="faq-a">接力赛以队伍为单位报名，每队4人，不限性别和年龄。报名时需要填写队伍名称和成员信息，51每日大赛会在报名截止后公布分组和对阵时间。如果队伍中有成员临时无法参赛，可以在开赛前24小时申请替换，具体流程参见报名页的说明。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">为什么有些赛事的热度变化很快？</div>
+        <div class="faq-a">热度变化通常和赛程节点、纪录刷新、社区讨论热度有关。比如半决赛对阵公布、速通纪录被打破、创意赛投票开启等事件，都会在短时间内吸引大量关注。51每日大赛的热度榜综合了搜索量、点击量和评论互动量，可以帮你快速判断当前哪些内容值得优先浏览。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评论 -->
+  <section class="section container" id="comments">
+    <div class="section-head">
+      <h2>社区热评 · 大家在讨论什么</h2>
+      <a href="/#comments" class="more-link">更多评论 →</a>
+    </div>
+    <div class="comment-grid">
+      <div class="comment-item"><div class="comment-avatar">风</div><div class="comment-body"><div class="comment-head"><span class="comment-name">风过无痕</span><span class="comment-date">11月6日</span></div><div class="comment-text">速通新纪录太强了，3分12秒的路线规划确实有想法。51每日大赛的速通榜更新很及时，希望后面能加上分段时间。</div></div></div>
+      <div class="comment-item"><div class="comment-avatar">星</div><div class="comment-body"><div class="comment-head"><span class="comment-name">星火观察员</span><span class="comment-date">11月6日</span></div><div class="comment-text">半决赛抽签今晚进行，希望星火战队能抽到好签。团队赛的战术博弈比个人赛更有看头。</div></div></div>
+      <div class="comment-item"><div class="comment-avatar">脑</div><div class="comment-body"><div class="comment-head"><span class="comment-name">脑力劳动者</span><span class="comment-date">11月5日</span></div><div class="comment-text">知识赛今天的题目偏难，有几道科技史的超纲了。不过51每日大赛的题库一直在扩充，可以理解。</div></div></div>
+      <div class="comment-item"><div class="comment-avatar">预</div><div class="comment-body"><div class="comment-head"><span class="comment-name">预测帝</span><span class="comment-date">11月5日</span></div><div class="comment-text">竞猜三场全中的路过。今天团队赛那场其实不好猜，双方实力太接近，最后靠后期决策分胜负。</div></div></div>
+      <div class="comment-item"><div class="comment-avatar">创</div><div class="comment-body"><div class="comment-head"><span class="comment-name">创意工坊主</span><span class="comment-date">11月4日</span></div><div class="comment-text">未来城市主题的作品质量比上周高，投票有点选择困难。51每日大赛的创意赛区越来越卷了。</div></div></div>
+      <div class="comment-item"><div class="comment-avatar">接</div><div class="comment-body"><div class="comment-head"><span class="comment-name">接力小队长</span><span class="comment-date">11月4日</span></div><div class="comment-text">接力赛报名了，队里有个成员今天临时有事，还好51每日大赛有替换机制，不然真得弃赛。</div></div></div>
+      <div class="comment-item"><div class="comment-avatar">路</div><div class="comment-body"><div class="comment-head"><span class="comment-name">路人甲</span><span class="comment-date">11月3日</span></div><div class="comment-text">每天刷一下51每日大赛已经成习惯了，最近页面加载速度还行，分类入口挺清楚的。</div></div></div>
+      <div class="comment-item"><div class="comment-avatar">数</div><div class="comment-body"><div class="comment-head"><span class="comment-name">数据控</span><span class="comment-date">11月3日</span></div><div class="comment-text">积分榜前三名的差距太小了，可能一场比赛就翻盘。希望51每日大赛能多加点历史数据对比。</div></div></div>
+      <div class="comment-item"><div class="comment-avatar">新</div><div class="comment-body"><div class="comment-head"><span class="comment-name">新手上路</span><span class="comment-date">11月2日</span></div><div class="comment-text">刚关注51每日大赛，不知道从哪看起，FAQ挺有用的，先按照推荐顺序看几天试试。</div></div></div>
+      <div class="comment-item"><div class="comment-avatar">吐</div><div class="comment-body"><div class="comment-head"><span class="comment-name">吐槽星人</span><span class="comment-date">11月2日</span></div><div class="comment-text">创意赛的投票页面能不能加个筛选？作品太多了，翻起来有点累。其他都挺好。</div></div></div>
+      <div class="comment-item"><div class="comment-avatar">老</div><div class="comment-body"><div class="comment-head"><span class="comment-name">老观众</span><span class="comment-date">11月1日</span></div><div class="comment-text">从51每日大赛早期就开始看，现在项目多了，内容也更丰富了。希望团队赛的直播能保留回放。</div></div></div>
+      <div class="comment-item"><div class="comment-avatar">选</div><div class="comment-body"><div class="comment-head"><span class="comment-name">选手视角</span><span class="comment-date">10月31日</span></div><div class="comment-text">作为参赛选手，最关心的是赛程安排和规则变动。51每日大赛的公告更新很及时，这点好评。</div></div></div>
+    </div>
+  </section>
+
+  <!-- 相关资讯 -->
+  <section class="section container" id="news">
+    <div class="section-head">
+      <h2>51每日大赛 · 赛事资讯</h2>
+      <a href="/#news" class="more-link">更多资讯 →</a>
+    </div>
+    <div class="news-list">
+      <div class="news-item">
+        <div class="news-title">冬季赛制调整公布：三项赛事计分规则微调</div>
+        <div class="news-desc">从11月10日起，团队赛与接力赛的积分权重将小幅上调，知识赛的答题时间限制有所放宽。详细调整方案已经在51每日大赛规则页发布，参赛选手需留意影响。</div>
+        <div class="news-date">2026年11月7日</div>
+      </div>
+      <div class="news-item">
+        <div class="news-title">星火杯半决赛抽签仪式今晚举行</div>
+        <div class="news-desc">四支晋级队伍将在今晚19:00进行对阵抽签，51每日大赛直播间同步直播。抽签结果将直接影响半决赛的对抗强度和晋级走势。</div>
+        <div class="news-date">2026年11月6日</div>
+      </div>
+      <div class="news-item">
+        <div class="news-title">速通赛纪录刷新：3分12秒背后的路线分析</div>
+        <div class="news-desc">选手「风痕」的速通路线选择在关键节点做出了非常规决策，51每日大赛编辑团队整理了分段数据，供其他选手参考研究。</div>
+        <div class="news-date">2026年11月6日</div>
+      </div>
+      <div class="news-item">
+        <div class="news-title">创意作品赛投稿量破400件，投票通道限时开放</div>
+        <div class="news-desc">「未来城市」主题的投稿数量创下近期新高，大众投票将持续到本周日。51每日大赛提醒每位用户每日有3次投票机会，珍惜手中的票数。</div>
+        <div class="news-date">2026年11月5日</div>
+      </div>
+      <div class="news-item">
+        <div class="news-title">知识竞赛题库扩充：新增科技与人文类题目</div>
+        <div class="news-desc">本次题库更新增加了30道新题，覆盖人工智能、航天科技和世界文学等方向。51每日大赛知识赛的参赛者可以在赛前浏览题目范围说明。</div>
+        <div class="news-date">2026年11月4日</div>
+      </div>
+      <div class="news-item">
+        <div class="news-title">接力挑战赛报名队伍突破80支，今日18:00截止</div>
+        <div class="news-desc">接力赛报名进入最后阶段，目前已有80余支队伍完成登记。51每日大赛将在报名截止后公布分组情况和比赛日程，请各队留意通知。</div>
+        <div class="news-date">2026年11月3日</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 页脚 -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">51<span>每日大赛</span></div>
+        <div class="footer-desc">每日更新赛事动态、榜单数据与社区讨论，为关注51每日大赛的用户提供清晰、及时的信息入口。页面内容仅供参考，具体赛制与规则以官方公告为准。</div>
+      </div>
+      <div class="footer-col">
+        <h4>快速导航</h4>
+        <a href="/#hero">首页</a>
+        <a href="/#hot-recommend">热门推荐</a>
+        <a href="/#latest-updates">最新赛况</a>
+        <a href="/#rank-board">实时榜单</a>
+      </div>
+      <div class="footer-col">
+        <h4>内容分类</h4>
+        <a href="/#categories">团队竞技</a>
+        <a href="/#categories">个人速通</a>
+        <a href="/#categories">知识答题</a>
+        <a href="/#categories">创意作品</a>
+      </div>
+      <div class="footer-col">
+        <h4>友情链接</h4>
+        <a href="/#">赛事规则说明</a>
+        <a href="/#">选手中心</a>
+        <a href="/#">社区指南</a>
+        <a href="/#">联系与反馈</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 51每日大赛 · 内容资讯页 保留所有权利</span>
+      <span>免责声明：本页面为赛事信息聚合展示，不构成参与建议。数据与排名以官方发布为准。</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+  </html>
